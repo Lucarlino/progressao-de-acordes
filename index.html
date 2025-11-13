@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Progressões de Acordes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 Gerador de Progressões de Acordes</h1>
+            <p>Crie progressões harmônicas para suas músicas</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="key">Tonalidade:</label>
+                <select id="key">
+                    <option value="C">Dó (C)</option>
+                    <option value="D">Ré (D)</option>
+                    <option value="E">Mi (E)</option>
+                    <option value="F">Fá (F)</option>
+                    <option value="G">Sol (G)</option>
+                    <option value="A">Lá (A)</option>
+                    <option value="B">Si (B)</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="scale">Escala:</label>
+                <select id="scale">
+                    <option value="major">Maior</option>
+                    <option value="minor">Menor</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="style">Estilo:</label>
+                <select id="style">
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="blues">Blues</option>
+                    <option value="minor">Menor</option>
+                    <option value="random">Aleatório</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="length">Número de Acordes:</label>
+                <select id="length">
+                    <option value="4">4 acordes</option>
+                    <option value="8">8 acordes</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="generate-btn" class="generate-btn">🎵 Gerar Progressão</button>
+
+        <div id="result" class="result hidden">
+            <div class="progression-display">
+                <h3>Sua Progressão:</h3>
+                <div id="chords" class="chords-container"></div>
+                <div id="degrees" class="degrees-container"></div>
+            </div>
+
+            <div class="analysis">
+                <h3>Análise Harmônica:</h3>
+                <p id="analysis-text"></p>
+            </div>
+
+            <div class="actions">
+                <button id="play-btn" class="play-btn">🎵 Tocar Progressão</button>
+                <button id="new-btn" class="new-btn">🔄 Nova Progressão</button>
+            </div>
+        </div>
+
+        <div class="examples">
+            <h3>Progressões Famosas:</h3>
+            <div class="example-list">
+                <button class="example-btn" data-progression="I-V-vi-IV">I-V-vi-IV (Pop)</button>
+                <button class="example-btn" data-progression="I-IV-V">I-IV-V (Rock)</button>
+                <button class="example-btn" data-progression="ii-V-I">ii-V-I (Jazz)</button>
+                <button class="example-btn" data-progression="I-vi-IV-V">I-vi-IV-V (50's)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
