@@ -216,7 +216,7 @@ function getRootNote(chordSymbol) {
     // Se for um grau romano, usar o mapa
     if (romanToNote[chordSymbol]) {
         return romanToNote[chordSymbol];
-    }
+    }       
     
     // Lista explícita de notas válidas
     const validNotes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
@@ -284,7 +284,7 @@ async function playProgression() {
             clearChordHighlights();
             
             // Pequena pausa entre acordes
-            await new Promise(resolve => setTimeout(resolve, 100));
+            await new Promise(resolve => setTimeout(resolve, 500));
         }
 
         // Resetar estado
